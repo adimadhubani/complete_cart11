@@ -139,8 +139,9 @@ function ShoppingHeader() {
     <header className="sticky top-0 z-40 w-full border-b bg-background">
       <div className="flex h-16 items-center justify-between px-4 md:px-6">
         <Link to="/shop/home" className="flex items-center gap-2">
-          <HousePlug className="h-6 w-6" />
-          <span className="font-bold">Ecommerce</span>
+          {/* <HousePlug className="h-6 w-6" /> */}
+          <img className="h-6 w-6" src="https://png.pngtree.com/png-vector/20230120/ourmid/pngtree-oak-tree-logo-design-png-image_6566843.png" alt="" />
+          <span className="font-bold">VanCart</span>
         </Link>
         <Sheet>
           <SheetTrigger asChild>

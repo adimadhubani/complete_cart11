@@ -46,6 +46,8 @@ function AdminProducts() {
 
   function onSubmit(event) {
     event.preventDefault();
+    console.log(imageFile);
+    console.log(uploadedImageUrl)
 
     currentEditedId !== null
       ? dispatch(
@@ -54,7 +56,7 @@ function AdminProducts() {
             formData,
           })
         ).then((data) => {
-          console.log(data, "edit");
+          // console.log(data, "edit");
 
           if (data?.payload?.success) {
             dispatch(fetchAllProducts());
@@ -101,6 +103,8 @@ function AdminProducts() {
   }, [dispatch]);
 
   console.log(formData, "productList");
+  console.log(imageFile);
+    console.log(uploadedImageUrl)
 
   return (
     <Fragment>
@@ -152,7 +156,7 @@ function AdminProducts() {
               setFormData={setFormData}
               buttonText={currentEditedId !== null ? "Edit" : "Add"}
               formControls={addProductFormElements}
-              isBtnDisabled={!isFormValid()}
+              // isBtnDisabled={!isFormValid()}
             />
           </div>
         </SheetContent>

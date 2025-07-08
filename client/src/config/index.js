@@ -58,25 +58,53 @@ export const addProductFormElements = [
     name: "category",
     componentType: "select",
     options: [
-      { id: "men", label: "Men" },
-      { id: "women", label: "Women" },
-      { id: "kids", label: "Kids" },
-      { id: "accessories", label: "Accessories" },
-      { id: "footwear", label: "Footwear" },
+      { id: "fruit_tree", label: "Fruit Tree" },
+      { id: "shade_tree", label: "Shade Tree" },
+      { id: "evergreen_tree", label: "Evergreen Tree" },
+      { id: "flowering_tree", label: "Flowering tree" },
+      { id: "indoor_tree", label: "Indoor Tree" },
     ],
   },
   {
-    label: "Brand",
-    name: "brand",
+    label: "Variety",
+    name: "variety",
     componentType: "select",
     options: [
-      { id: "nike", label: "Nike" },
-      { id: "adidas", label: "Adidas" },
-      { id: "puma", label: "Puma" },
-      { id: "levi", label: "Levi's" },
-      { id: "zara", label: "Zara" },
-      { id: "h&m", label: "H&M" },
-    ],
+      // Fruit Trees
+      { id: "apple_tree", label: "Apple Tree" },
+      { id: "lemon_tree", label: "Lemon Tree" },
+      { id: "avocado_tree", label: "Avocado Tree" },
+      { id: "cherry_tree", label: "Cherry Tree" },
+      { id: "fig_tree", label: "Fig Tree" },
+      
+      // Shade Trees
+      { id: "oak_tree", label: "Oak Tree" },
+      { id: "maple_tree", label: "Maple Tree" },
+      { id: "weeping_willow", label: "Weeping Willow" },
+      { id: "tulip_tree", label: "Tulip Tree" },
+      { id: "london_plane_tree", label: "London Plane Tree" },
+      
+      // Evergreen Trees
+      { id: "blue_spruce", label: "Blue Spruce" },
+      { id: "arborvitae", label: "Arborvitae" },
+      { id: "italian_cypress", label: "Italian Cypress" },
+      { id: "douglas_fir", label: "Douglas Fir" },
+      { id: "juniper", label: "Juniper" },
+      
+      // Flowering Trees
+      { id: "dogwood", label: "Dogwood" },
+      { id: "magnolia", label: "Magnolia" },
+      { id: "crape_myrtle", label: "Crape Myrtle" },
+      { id: "redbud", label: "Redbud" },
+      { id: "cherry_blossom", label: "Cherry Blossom" },
+      
+      // Indoor Trees
+      { id: "fiddle_leaf_fig", label: "Fiddle Leaf Fig" },
+      { id: "money_tree", label: "Money Tree" },
+      { id: "rubber_plant", label: "Rubber Plant" },
+      { id: "dragon_tree", label: "Dragon Tree" },
+      { id: "norfolk_island_pine", label: "Norfolk Island Pine" }
+    ]
   },
   {
     label: "Price",
@@ -113,28 +141,28 @@ export const shoppingViewHeaderMenuItems = [
     path: "/shop/listing",
   },
   {
-    id: "men",
-    label: "Men",
+    id: "fruit_tree",
+    label: "Fruit Tree",
     path: "/shop/listing",
   },
   {
-    id: "women",
-    label: "Women",
+    id: "shade_tree",
+    label: "Shade Tree",
     path: "/shop/listing",
   },
   {
-    id: "kids",
-    label: "Kids",
+    id: "evergreen_tree",
+    label: "Evergreen Tree",
     path: "/shop/listing",
   },
   {
-    id: "footwear",
-    label: "Footwear",
+    id: "flowering_tree",
+    label: "Flowering Tree",
     path: "/shop/listing",
   },
   {
-    id: "accessories",
-    label: "Accessories",
+    id: "indoor_tree",
+    label: "Indoor Tree",
     path: "/shop/listing",
   },
   {
@@ -145,38 +173,94 @@ export const shoppingViewHeaderMenuItems = [
 ];
 
 export const categoryOptionsMap = {
-  men: "Men",
-  women: "Women",
-  kids: "Kids",
-  accessories: "Accessories",
-  footwear: "Footwear",
+  men: "Fruit Tree",
+  women: "Shade Tree",
+  kids: "Evergreen Tree",
+  accessories: "Flowering Tree",
+  footwear: "Indoor Tree",
 };
 
 export const brandOptionsMap = {
-  nike: "Nike",
-  adidas: "Adidas",
-  puma: "Puma",
-  levi: "Levi",
-  zara: "Zara",
-  "h&m": "H&M",
-};
+  // Fruit Trees
+  apple_tree: "Apple Tree",
+  lemon_tree: "Lemon Tree",
+  avocado_tree: "Avocado Tree",
+  cherry_tree: "Cherry Tree",
+  fig_tree: "Fig Tree",
+
+  // Shade Trees
+  oak_tree: "Oak Tree",
+  maple_tree: "Maple Tree",
+  weeping_willow: "Weeping Willow",
+  tulip_tree: "Tulip Tree",
+  london_plane_tree: "London Plane Tree",
+
+  // Evergreen Trees
+  blue_spruce: "Blue Spruce",
+  arborvitae: "Arborvitae",
+  italian_cypress: "Italian Cypress",
+  douglas_fir: "Douglas Fir",
+  juniper: "Juniper",
+
+  // Flowering Trees
+  dogwood: "Dogwood",
+  magnolia: "Magnolia",
+  crape_myrtle: "Crape Myrtle",
+  redbud: "Redbud",
+  cherry_blossom: "Cherry Blossom",
+
+  // Indoor Trees
+  fiddle_leaf_fig: "Fiddle Leaf Fig",
+  money_tree: "Money Tree",
+  rubber_plant: "Rubber Plant",
+  dragon_tree: "Dragon Tree",
+  norfolk_island_pine: "Norfolk Island Pine"
+}
 
 export const filterOptions = {
   category: [
-    { id: "men", label: "Men" },
-    { id: "women", label: "Women" },
-    { id: "kids", label: "Kids" },
-    { id: "accessories", label: "Accessories" },
-    { id: "footwear", label: "Footwear" },
+    { id: "fruit_tree", label: "Fruit Tree" },
+    { id: "shade_tree", label: "Shade Tree" },
+    { id: "evergreen_tree", label: "Evergreen Tree" },
+    { id: "flowering_tree", label: "Flowering tree" },
+    { id: "indoor_tree", label: "Indoor Tree" },
   ],
-  brand: [
-    { id: "nike", label: "Nike" },
-    { id: "adidas", label: "Adidas" },
-    { id: "puma", label: "Puma" },
-    { id: "levi", label: "Levi's" },
-    { id: "zara", label: "Zara" },
-    { id: "h&m", label: "H&M" },
-  ],
+  variety: [
+    // Fruit Trees
+    { id: "apple_tree", label: "Apple Tree" },
+    { id: "lemon_tree", label: "Lemon Tree" },
+    { id: "avocado_tree", label: "Avocado Tree" },
+    { id: "cherry_tree", label: "Cherry Tree" },
+    { id: "fig_tree", label: "Fig Tree" },
+    
+    // Shade Trees
+    { id: "oak_tree", label: "Oak Tree" },
+    { id: "maple_tree", label: "Maple Tree" },
+    { id: "weeping_willow", label: "Weeping Willow" },
+    { id: "tulip_tree", label: "Tulip Tree" },
+    { id: "london_plane_tree", label: "London Plane Tree" },
+    
+    // Evergreen Trees
+    { id: "blue_spruce", label: "Blue Spruce" },
+    { id: "arborvitae", label: "Arborvitae" },
+    { id: "italian_cypress", label: "Italian Cypress" },
+    { id: "douglas_fir", label: "Douglas Fir" },
+    { id: "juniper", label: "Juniper" },
+    
+    // Flowering Trees
+    { id: "dogwood", label: "Dogwood" },
+    { id: "magnolia", label: "Magnolia" },
+    { id: "crape_myrtle", label: "Crape Myrtle" },
+    { id: "redbud", label: "Redbud" },
+    { id: "cherry_blossom", label: "Cherry Blossom" },
+    
+    // Indoor Trees
+    { id: "fiddle_leaf_fig", label: "Fiddle Leaf Fig" },
+    { id: "money_tree", label: "Money Tree" },
+    { id: "rubber_plant", label: "Rubber Plant" },
+    { id: "dragon_tree", label: "Dragon Tree" },
+    { id: "norfolk_island_pine", label: "Norfolk Island Pine" }
+  ]
 };
 
 export const sortOptions = [

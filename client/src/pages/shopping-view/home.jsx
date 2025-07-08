@@ -16,6 +16,28 @@ import {
   UmbrellaIcon,
   WashingMachine,
   WatchIcon,
+  TreesIcon, 
+  SunIcon, 
+  LeafIcon, 
+  SproutIcon, 
+  HomeIcon ,
+  AppleIcon, // For fruit trees
+  // PineTreeIcon, // For evergreens
+  FlowerIcon, // For flowering trees
+  MountainIcon,
+  GemIcon,
+  ShieldIcon,
+  CitrusIcon,
+  // AvocadoIcon,
+  CherryIcon,
+  FigmaIcon,
+  TreeDeciduousIcon,
+  // MapleLeafIcon,
+  CoinsIcon,
+  DropletsIcon,
+  SparklesIcon,
+  TreePineIcon,
+  // PlantIcon
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useEffect, useState } from "react";
@@ -32,20 +54,30 @@ import ProductDetailsDialog from "@/components/shopping-view/product-details";
 import { getFeatureImages } from "@/store/common-slice";
 
 const categoriesWithIcon = [
-  { id: "men", label: "Men", icon: ShirtIcon },
-  { id: "women", label: "Women", icon: CloudLightning },
-  { id: "kids", label: "Kids", icon: BabyIcon },
-  { id: "accessories", label: "Accessories", icon: WatchIcon },
-  { id: "footwear", label: "Footwear", icon: UmbrellaIcon },
+  { id: "fruit_tree", label: "Fruit Tree", icon: TreesIcon },
+  { id: "shade_tree", label: "Shade Tree", icon: SunIcon },
+  { id: "evergreen_tree", label: "Evergreen Tree", icon: LeafIcon },
+  { id: "flowering_tree", label: "Flowering Tree", icon: SproutIcon },
+  { id: "indoor_tree", label: "Indoor Tree", icon: HomeIcon },
 ];
 
 const brandsWithIcon = [
-  { id: "nike", label: "Nike", icon: Shirt },
-  { id: "adidas", label: "Adidas", icon: WashingMachine },
-  { id: "puma", label: "Puma", icon: ShoppingBasket },
-  { id: "levi", label: "Levi's", icon: Airplay },
-  { id: "zara", label: "Zara", icon: Images },
-  { id: "h&m", label: "H&M", icon: Heater },
+  { id: "apple_tree", label: "Apple Tree", icon: AppleIcon },
+  { id: "lemon_tree", label: "Lemon Tree", icon: CitrusIcon },
+  { id: "cherry_tree", label: "Cherry Tree", icon: CherryIcon },
+  { id: "fig_tree", label: "Fig Tree", icon: FigmaIcon }, 
+  { id: "weeping_willow", label: "Weeping Willow", icon: LeafIcon },
+  { id: "tulip_tree", label: "Tulip Tree", icon: FlowerIcon },
+  { id: "london_plane_tree", label: "London Plane Tree", icon: TreeDeciduousIcon },
+  { id: "oak_tree", label: "Oak Tree", icon: TreeDeciduousIcon },
+  { id: "blue_spruce", label: "Blue Spruce", icon: TreePineIcon },
+  { id: "dogwood", label: "Dogwood", icon: FlowerIcon },
+  { id: "magnolia", label: "Magnolia", icon: FlowerIcon },
+  { id: "fiddle_leaf_fig", label: "Fiddle Leaf Fig", icon: HomeIcon },
+  { id: "money_tree", label: "Money Tree", icon: CoinsIcon },
+  { id: "rubber_plant", label: "Rubber Plant", icon: DropletsIcon },
+  { id: "dragon_tree", label: "Dragon Tree", icon: SparklesIcon },
+  { id: "norfolk_island_pine", label: "Norfolk Island Pine", icon: TreePineIcon }
 ];
 function ShoppingHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -100,7 +132,7 @@ function ShoppingHome() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % featureImageList.length);
-    }, 15000);
+    }, 4000);
 
     return () => clearInterval(timer);
   }, [featureImageList]);
