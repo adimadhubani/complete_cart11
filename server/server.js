@@ -28,20 +28,10 @@ mongoose
 const app = express();
 // console.log(process.env.MONGO_URL)
 
-app.use(
-  cors({
-    origin: "https://complete-cart11.vercel.app/",
-    methods: ["GET", "POST", "DELETE", "PUT"],
-    // allowedHeaders: [
-      //   "Content-Type",
-      //   "Authorization",
-      //   "Cache-Control",
-      //   "Expires",
-      //   "Pragma",
-      // ],
-      credentials: true,
-    })
-    );
+app.use(cors({
+  origin: "https://complete-cart11.vercel.app", // ❌ no trailing slash
+  credentials: true, // ✅ if using cookies or auth tokens
+}));
     
     const PORT = process.env.PORT || 8080;
 app.use(cookieParser());
