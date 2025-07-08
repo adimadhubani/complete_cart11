@@ -29,7 +29,7 @@ const app = express();
 // console.log(process.env.MONGO_URL)
 
 app.use(cors({
-  origin: "https://complete-cart11.vercel.app", // ❌ no trailing slash
+  origin: "https://complete-cart11-1.onrender.com", // ❌ no trailing slash
   credentials: true, // ✅ if using cookies or auth tokens
 }));
     

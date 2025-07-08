@@ -26,8 +26,8 @@ const createOrder = async (req, res) => {
         payment_method: "paypal",
       },
       redirect_urls: {
-        return_url: "https://complete-cart11.vercel.app/shop/paypal-return",
-        cancel_url: "https://complete-cart11.vercel.app/shop/paypal-cancel",
+        return_url: "https://complete-cart11-1.onrender.com/shop/paypal-return",
+        cancel_url: "https://complete-cart11-1.onrender.com/shop/paypal-cancel",
       },
       transactions: [
         {
